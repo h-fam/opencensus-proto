@@ -1,0 +1,12 @@
+load("@bazel_gazelle//:def.bzl", "gazelle")
+
+# gazelle:resolve go github.com/census-instrumentation/opencensus-proto/gen-go/resource/v1  @opencensus_proto//gen-go/resource/v1:go_default_library
+# gazelle:resolve go github.com/census-instrumentation/opencensus-proto/gen-go/agent/common/v1 @opencensus_proto//gen-go/agent/common/v1:go_default_library
+# gazelle:resolve go github.com/census-instrumentation/opencensus-proto/gen-go/metrics/v1 @opencensus_proto//gen-go/metrics/v1:go_default_library
+# gazelle:resolve go github.com/census-instrumentation/opencensus-proto/gen-go/trace/v1 @opencensus_proto//gen-go/trace/v1:go_default_library
+
+# gazelle:prefix github.com/census-instrumentation/opencensus-proto
+gazelle(
+    name = "gazelle",
+    prefix = "github.com/census-instrumentation/opencensus-proto",
+)
